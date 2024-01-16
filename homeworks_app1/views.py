@@ -10,7 +10,7 @@ def index(request):
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Задание 8</title>
+        <title>Homework 1</title>
     </head>
     <body>
         <h1>Это главная страница сайта на Django.</h1>
@@ -29,7 +29,7 @@ def about_myself(request):
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Задание 8</title>
+        <title>Homework 1</title>
     </head>
     <body>
         <h1>Это страница обо мне.</h1>
