@@ -21,5 +21,6 @@ from homeworks_app1 import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('homeworks_app1.urls', namespace='homeworks_app1'))
+    path('hom1/', include('homeworks_app1.urls', namespace='homeworks_app1')),
+    path('hom2/', include('homeworks_app2.urls', namespace='homeworks_app2')),
 ]
