@@ -23,6 +23,9 @@ class Product(models.Model):
         return f'Product {self.name} {self.description}'
 
 
+
+
+
 class Order(models.Model):
     client = models.ForeignKey(to=Client, on_delete=models.CASCADE, verbose_name='Клиент')
     product = models.ManyToManyField(to=Product, verbose_name='Продукт')

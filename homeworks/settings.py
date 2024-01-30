@@ -38,6 +38,9 @@ INSTALLED_APPS = [
 
     'homeworks_app1',
     'homeworks_app2',
+    'homeworks_app3',
+    'homeworks_app4',
+    'homeworks_app5',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +58,7 @@ ROOT_URLCONF = 'homeworks.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,6 +120,10 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -157,3 +164,5 @@ LOGGING = {
         },
     },
 }
+
+# AUTH_USER_MODEL = 'homeworks_app3.Client'

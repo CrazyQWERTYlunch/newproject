@@ -5,5 +5,15 @@
 {% endblock %}
 
 {% block content %}
-    {{ content }}
+    {% if orders %}
+        {% for order in orders %}
+            <ol>{{ order }} Общая стоимость заказа: {{ order.total_price }}
+                {% for product in order.order_products %}
+                    <ul>{{ product }} Общая стоимость: {{product.products_price}}</ul>
+                {% endfor %}
+            </ol>
+        {% endfor %}
+    {% else %}
+        У этого клиента ещё нет заказов
+    {% endif %}
 {% endblock %}

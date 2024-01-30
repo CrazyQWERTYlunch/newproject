@@ -1,10 +1,43 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>{% block title %} Шаблон базового заголовка {% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/my_css.css" %}">
 </head>
+
+
 <body>
-$END$
+    <header>
+        <nav class="navbar" >
+            <li class="nav-item">
+                <a class="navbar-brand" href="{% url "homeworks_app3:index" %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="{% url "homeworks_app3:view_orders" %}">Заказы</a>
+            </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="{% url "homeworks_app3:catalog" %}"">Товары</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  text-white" href="#">Корзина</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  text-white" href="#">Войти</a>
+            </li>
+        </nav>
+    </header>
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+
+    <footer>
+        {% block footer %}
+        {% endblock %}
+    </footer>
 </body>
+
 </html>
