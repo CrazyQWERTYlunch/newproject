@@ -36,13 +36,26 @@ class CreateOrderForm(forms.Form):
         choices=[
             ("0", 'False'),
             ("1", 'True'),
-            ],
-        )
+        ],
+    )
     delivery_address = forms.CharField(required=False)
     payment_on_get = forms.ChoiceField(
         choices=[
             ("0", 'False'),
             ("1", 'True'),
-            ],
-        )
+        ],
+    )
 
+
+class CreateProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = ['name', 'price', 'quantity', 'description', 'image']
+
+
+class ChangeProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = ['name', 'price', 'quantity', 'description', 'image']
+
+    # image = forms.ImageField(required=False)

@@ -34,8 +34,8 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='Цена')
     quantity = models.PositiveIntegerField(default=0, verbose_name='Количество')
     description = models.TextField(blank=True, null=True, verbose_name='Описание')
-    # image = models.ImageField(upload_to='goods_images', blank=True, null=True, verbose_name='Изображение')
-    date_added = models.DateField(auto_now_add=True, verbose_name='Дата добавления')
+    image = models.ImageField(upload_to='goods_images', blank=True, null=True, verbose_name='Изображение')
+    date_added = models.DateField(auto_now_add=True, verbose_name='Дата добавления', blank=True)
 
     class Meta:
         db_table = 'product'
