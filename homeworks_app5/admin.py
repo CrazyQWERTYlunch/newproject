@@ -9,7 +9,6 @@ class ClientAdmin(admin.ModelAdmin):
     search_fields = ['username', 'email', ]
 
 
-
 @admin.register(Product)
 class ProductsAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
