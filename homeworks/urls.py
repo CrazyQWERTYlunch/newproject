@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hom1/', include('homeworks_app1.urls', namespace='homeworks_app1')),
     path('hom2/', include('homeworks_app2.urls', namespace='homeworks_app2')),
-    path('hom3/', include('homeworks_app3.urls', namespace='homeworks_app3')),
+    path('', include('homeworks_app3.urls', namespace='homeworks_app3')),
     path('hom4/', include('homeworks_app4.urls', namespace='homeworks_app4')),
     path('hom5/', include('homeworks_app5.urls', namespace='homeworks_app5')),
 ]

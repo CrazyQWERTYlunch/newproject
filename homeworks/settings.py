@@ -22,10 +22,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-goub_(@ixj1jpy@0kinigp1-tm+#r8tcd(93xg5gfo9ixnu8(*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '192.168.0.191',
+    '192.168.0.1',
+    '127.0.0.1',
+    'NikNikita.pythonanywhere.com',
+]
 
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -116,9 +124,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static/'
+
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR
 ]
 
 MEDIA_URL = '/media/'
