@@ -1,7 +1,7 @@
 import logging
 from django.shortcuts import HttpResponse
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 
 def index(request):
@@ -18,7 +18,7 @@ def index(request):
     </body>
     </html>
         """
-    logger.debug('Index page requested.')
+    # logger.debug('Index page requested.')
 
     return HttpResponse(html)
 
@@ -37,6 +37,6 @@ def about_myself(request):
     </body>
     </html>
         """
-    logger.debug('About page requested.')
+    # logger.debug('About page requested.')
 
     return HttpResponse(html)
