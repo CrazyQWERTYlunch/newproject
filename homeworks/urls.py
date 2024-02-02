@@ -28,5 +28,4 @@ urlpatterns = [
     path('hom5/', include('homeworks_app5.urls', namespace='homeworks_app5')),
 ]
 
-
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
